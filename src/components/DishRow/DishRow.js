@@ -36,12 +36,15 @@ const DishRow = ({ id, name, description, price, image }) => {
 
     dispatch(removeFromBasket({ id }));
   };
+
+  const handleDishPress = () => {
+    navigation.navigate("Options", {
+      id,
+    });
+  };
   return (
     <>
-      <TouchableOpacity
-        onPress={() => navigation.navigate("Options")}
-        style={styles.dish}
-      >
+      <TouchableOpacity onPress={handleDishPress} style={styles.dish}>
         <View style={styles.dishContainer}>
           <View>
             <Text style={styles.dishTitle}>{name}</Text>

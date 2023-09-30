@@ -59,11 +59,5 @@ export default defineType({
       title: 'Longitude',
       validation: (Rule) => Rule.max(200),
     },
-    {
-      name: 'dishes',
-      type: 'array',
-      title: 'Dishes',
-      of: [{type: 'reference', to: [{type: 'dish'}]}],
-    },
   ],
 })
